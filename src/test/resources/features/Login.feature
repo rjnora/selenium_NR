@@ -17,7 +17,7 @@ Feature: Login
     And I click login button
     And I should see "Invalid username / password" text
 
-    @login.outline
+    @login.outline @smoke
     Scenario Outline: Login scenario
       Then I fill in "<password>" as password
       And I click login button

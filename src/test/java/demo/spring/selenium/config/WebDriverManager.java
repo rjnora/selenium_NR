@@ -3,6 +3,7 @@ package demo.spring.selenium.config;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,8 +32,10 @@ public class WebDriverManager {
 //            return new FirefoxDriver();
 //        }
 //        return null;
-        final String DOCKER_HOST = "https://fab8-182-0-243-179.ap.ngrok.io";
+//        final String DOCKER_HOST = "https://96fe-202-165-38-66.ap.ngrok.io";
+        final String DOCKER_HOST = "http://localhost:4444";
         String remote = String.format("%s/wd/hub",DOCKER_HOST);
         return new RemoteWebDriver(new URL(remote),new ChromeOptions());
+//        return new RemoteWebDriver(new URL(remote),new EdgeOptions());
     }
 }
