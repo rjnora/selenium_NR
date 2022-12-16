@@ -33,7 +33,8 @@ public class WebDriverManager {
 //        }
 //        return null;
 //        final String DOCKER_HOST = "https://96fe-202-165-38-66.ap.ngrok.io";
-        final String DOCKER_HOST = "http://localhost:4444";
+//        final String DOCKER_HOST = "http://localhost:4444";
+            final String DOCKER_HOST = "http://10.0.110.71:4444";
         String remote = String.format("%s/wd/hub",DOCKER_HOST);
         return new RemoteWebDriver(new URL(remote),new ChromeOptions());
 //        return new RemoteWebDriver(new URL(remote),new EdgeOptions());
